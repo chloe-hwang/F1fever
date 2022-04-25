@@ -1,0 +1,6 @@
+#DEVELOPMENT, PRODUCTION, USE 
+fastf1
+
+
+#TEST 
+pytest

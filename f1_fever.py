@@ -1,3 +1,0 @@
-## USER INPUT 
-
-input("HI! ")

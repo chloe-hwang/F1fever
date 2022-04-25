@@ -10,10 +10,22 @@ After the Grand Prix race, this project will showcase the results of the race, s
 # Getting Started 
 This project requires Python version 3.8 or above 
 
-create and active virtual environment 
+create and activate virtual environment 
+```sh 
+conda create -n formula-env 
+conda activate formula-env
+```
 
 # Requirements  
-packages 
+Packages and other requirements are listed on the requirements.txt file
+```sh 
+pip install -r requirements.txt
+```
+
+You might have to use 
+```sh
+pip3 install -r requirements.txt
+```
 
 # Executing the Program 
 To play the game 

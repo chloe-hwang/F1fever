@@ -1,5 +1,11 @@
 #DEVELOPMENT, PRODUCTION, USE 
+
+sendgrid==6.6.0
+python-dotenv
+pandas
+requests
 fastf1
+json
 
 
 #TEST 

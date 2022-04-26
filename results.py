@@ -8,11 +8,10 @@ result = json.loads(response.text)
 data = result['MRData']
 results = data["RaceTable"]["Races"]
 
-print("Race Results For The", results[0]["raceName"],":")
-
+print("Race Results For The", results[0]["raceName"], results[0]["season"],":")
 
 race_result = results[0]["Results"]
 
 
-for d in race_result:
-    print(d["Driver"]["givenName"], d["Driver"]["familyName"])
+for index, d in enumerate(race_result, start=1):
+    print(index, "-", d["Driver"]["givenName"], d["Driver"]["familyName"])

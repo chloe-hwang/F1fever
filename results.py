@@ -15,3 +15,5 @@ race_result = results[0]["Results"]
 
 for index, d in enumerate(race_result, start=1):
     print(index, "-", d["Driver"]["givenName"], d["Driver"]["familyName"])
+
+

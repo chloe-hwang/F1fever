@@ -8,5 +8,9 @@ fastf1
 json
 
 
+
+flask
+flask-sqlalchemy
+
 #TEST 
 pytest

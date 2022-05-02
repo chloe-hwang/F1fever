@@ -12,7 +12,7 @@ This project requires Python version 3.8 or above
 
 create and activate virtual environment 
 ```sh 
-conda create -n formula-env 
+conda create -n formula-env python=3.8
 conda activate formula-env
 ```
 

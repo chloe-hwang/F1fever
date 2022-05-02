@@ -16,7 +16,6 @@ def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = SECRET_KEY
     app.register_blueprint(home_routes)
-    #app.register_blueprint(book_routes)
     app.register_blueprint(betting_routes)
     return app
 

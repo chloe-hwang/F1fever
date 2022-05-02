@@ -1,0 +1,14 @@
+{% block content %}
+
+    <h2>Race Results For The {{ results[0]["raceName"] }} {{ results[0]["season"] }} :</h2>
+
+    <ul>
+    {% for index, d in enumerate(results[0]["Results"], start=1) %}
+        <li>index - {{ d["Driver"]["givenName"] }} {{ d["Driver"]["familyName"] }}</li>
+    {% endfor %}
+    </ul>
+
+    <p>Winner of the {{ results[0]["raceName"] }} {{ results[0]["season"] }} is: {{ results[0]["Results"][0]["Driver"]["givenName"] }} {{ results[0]["Results"][0]["Driver"]["familyName"]}} </p>
+{% endblock %}
+
+

@@ -5,12 +5,8 @@ python-dotenv
 pandas
 requests
 fastf1
-json
-
-
-
 flask
-flask-sqlalchemy
+json
 
 #TEST 
 pytest

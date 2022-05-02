@@ -24,13 +24,21 @@ def betting_results():
     round_code = request_data.get("round") or "1"
 
     results = get_betting_results(season_code=season_code, round_code=round_code)
-    if results:
-        flash("Betting Results Generated Successfully!", "success")
-        get_betting_results(season_code=season_code, round_code=round_code)
-        return render_template("betting_result.html", results=results)
-    else:
-        flash(" Please try again!", "danger")
-        return redirect("/betting/form")
+    
+    return render_template("betting_results.html", results=results)
+
+
+
+
+
+    #if results:
+    #    flash("Betting Results Generated Successfully!", "success")
+    #    return render_template("betting_results.html", results=results)
+    #else:
+    #    flash("The Grand Prix has not taken place yet! Please try again at a later time!", "danger")
+    #    return redirect("/betting/form") 
+    
+  
 
 
 

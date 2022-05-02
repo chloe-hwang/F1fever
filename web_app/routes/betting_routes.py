@@ -22,21 +22,34 @@ def betting_results():
 
     season_code = request_data.get("season") or "2022"
     round_code = request_data.get("round") or "1"
+    winner_user_input_code = request_data.get("winner_user_input") or "Lewis Hamilton"
 
     results = get_betting_results(season_code=season_code, round_code=round_code)
+
+    given_name = results[0]["Results"][0]["Driver"]["givenName"]
+    family_name = results[0]["Results"][0]["Driver"]["familyName"]
+    winner_actual = given_name + " " + family_name
     
-    return render_template("betting_results.html", results=results)
+    print(given_name)
+    print(family_name)
+    print(winner_actual)
+
+    if winner_actual == winner_user_input_code:
+       bet_code = "right"
+    else:
+       bet_code = "wrong" 
+
+    print(bet_code)
+
+    if results:
+        flash("Betting Results Generated Successfully!", "success")
+        return render_template("betting_results.html", results=results, winner_user_input_code=winner_user_input_code, bet_code=bet_code)
+    else:
+        flash("The Grand Prix has not taken place yet! Please try again at a later time!", "danger")
+        return redirect("/betting/form")
 
 
-
-
-
-    #if results:
-    #    flash("Betting Results Generated Successfully!", "success")
-    #    return render_template("betting_results.html", results=results)
-    #else:
-    #    flash("The Grand Prix has not taken place yet! Please try again at a later time!", "danger")
-    #    return redirect("/betting/form") 
+ 
     
   
 

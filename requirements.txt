@@ -5,7 +5,7 @@ pandas
 requests
 fastf1
 flask
-json
+#json
 
 #TEST 
 pytest

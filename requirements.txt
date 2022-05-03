@@ -7,7 +7,9 @@ fastf1
 flask
 #json
 
-#TEST 
+#PRODUCTION WEB SERVER
+gunicorn
+
+#TEST
 pytest
 
-gunicorn

@@ -18,3 +18,7 @@ def test_get_betting_results():
     assert results[0]["Results"][0]["position"] == "1"
     assert results[0]["Results"][0]["Driver"]["givenName"] == "Charles"
     assert results[0]["Results"][0]["Driver"]["familyName"] == "Leclerc"
+
+#def test_invalid_betting():
+    #with invalid input, 
+    #results = get_betting_results

@@ -18,10 +18,11 @@ def about():
 @home_routes.route("/fail")
 def fail():
     print("fail")
-    return render_template("fail.html")
+    return render_template("fail.html"
 
-
+                           
 @home_routes.route("/drivers")
 def drivers():
     print("DRIVERS...")
     return render_template("drivers.html")
+

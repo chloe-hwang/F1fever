@@ -14,3 +14,8 @@ def index():
 def about():
     print("ABOUT...")
     return render_template("about.html")
+
+@home_routes.route("/fail")
+def fail():
+    print("fail")
+    return render_template("fail.html")

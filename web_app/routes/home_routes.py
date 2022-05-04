@@ -13,8 +13,4 @@ def index():
 @home_routes.route("/about")
 def about():
     print("ABOUT...")
-    return "About Me"
-    #return render_template("about.html")
-
-    #update
-    #update2
+    return render_template("about.html")

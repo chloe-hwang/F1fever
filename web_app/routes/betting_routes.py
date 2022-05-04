@@ -25,23 +25,25 @@ def betting_results():
     winner_user_input_code = request_data.get("winner_user_input") or "Lewis Hamilton"
 
     results = get_betting_results(season_code=season_code, round_code=round_code)
+    if any(results):
 
-    given_name = results[0]["Results"][0]["Driver"]["givenName"]
-    family_name = results[0]["Results"][0]["Driver"]["familyName"]
-    winner_actual = given_name + " " + family_name
-    
-    print(given_name)
-    print(family_name)
-    print(winner_actual)
 
-    if winner_actual == winner_user_input_code:
-       bet_code = "right"
-    else:
-       bet_code = "wrong" 
+        given_name = results[0]["Results"][0]["Driver"]["givenName"]
+        family_name = results[0]["Results"][0]["Driver"]["familyName"]
+        winner_actual = given_name + " " + family_name
+        
+        print(given_name)
+        print(family_name)
+        print(winner_actual)
 
-    print(bet_code)
+        if winner_actual == winner_user_input_code:
+            bet_code = "right"
+        else:
+            bet_code = "wrong" 
 
-    if results:
+        print(bet_code)
+
+  
         flash("Betting Results Generated Successfully!", "success")
         return render_template("betting_results.html", results=results, winner_user_input_code=winner_user_input_code, bet_code=bet_code)
     else:

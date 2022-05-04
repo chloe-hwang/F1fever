@@ -19,3 +19,8 @@ def about():
 def fail():
     print("fail")
     return render_template("fail.html")
+
+@home_routes.route("/drivers")
+def drivers():
+    print("DRIVERS...")
+    return render_template("drivers.html")

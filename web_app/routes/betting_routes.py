@@ -46,7 +46,7 @@ def betting_results():
         return render_template("betting_results.html", results=results, winner_user_input_code=winner_user_input_code, bet_code=bet_code)
     else:
         flash("The Grand Prix has not taken place yet! Please try again at a later time!", "danger")
-        return redirect("/betting/form")
+        return render_template("fail.html")
 
 
  

@@ -27,14 +27,45 @@ You might have to use
 pip3 install -r requirements.txt
 ```
 
-# Executing the Program 
-To play the game 
-```sh 
-python f1_fever.py
+# Running the Web App (Locally)
+You can run it from the root directory like this:
+```sh
+FLASK_APP=web_app flask run
 ```
 
 
+# Deploying to Heroku 
+Use the command-line to create a new application server, specifying a unique name (e.g. "formula1fever" but yours will need to be different):
+```sh
+heroku create notification-app-123 
+```
+
+Verify the app has been created:
+```sh
+heroku apps
+``` 
+
+Also verify this step has associated the local repo with a remote address called "heroku":
+```sh
+git remote -v
+```
+
+
+"deploy" the application's source code to the Heroku server:
+```sh
+git push heroku main
+```
+
 # Running Tests 
+```sh
+pytest
+```
+
+# in CI mode:
+```sh
+CI=true pytest
+```
+
 
 # Authors 
 Chloe Hwang 

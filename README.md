@@ -37,7 +37,7 @@ FLASK_APP=web_app flask run
 # Deploying to Heroku 
 Use the command-line to create a new application server, specifying a unique name (e.g. "formula1fever" but yours will need to be different):
 ```sh
-heroku create notification-app-123 
+heroku create formula1fever
 ```
 
 Verify the app has been created:
@@ -50,21 +50,17 @@ Also verify this step has associated the local repo with a remote address called
 git remote -v
 ```
 
-
-"deploy" the application's source code to the Heroku server:
+"Deploy" the application's source code to the Heroku server:
 ```sh
 git push heroku main
 ```
 
 # Running Tests 
+Pytest is a mature full-featured Python testing tool that helps you write better programs.
 ```sh
 pytest
 ```
 
-# in CI mode:
-```sh
-CI=true pytest
-```
 
 
 # Authors 

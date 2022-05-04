@@ -10,11 +10,11 @@
         {% endfor %}
     </ul>
 
-    <p>Winner of the {{ results[0]["raceName"] }} {{ results[0]["season"] }} 
-        is: {{ results[0]["Results"][0]["Driver"]["givenName"] }} 
+    <p><b>Winner of the {{ results[0]["raceName"] }} {{ results[0]["season"] }} 
+        is:</b> {{ results[0]["Results"][0]["Driver"]["givenName"] }} 
         {{ results[0]["Results"][0]["Driver"]["familyName"] }} </p>
 
-        <p>Your bet that {{ winner_user_input_code }} would be the winner of the {{ results[0]["raceName"] }} {{ results[0]["season"] }} was {{ bet_code }}!</p>
+        <p>Your bet that <b>{{ winner_user_input_code }}</b> would be the winner of the {{ results[0]["raceName"] }} {{ results[0]["season"] }} was {{ bet_code }}!</p>
 {% endblock %}
 
 
